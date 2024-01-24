@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function NavBar() {
 	return (
@@ -16,19 +17,23 @@ export default function NavBar() {
 				</Link>
 				<Link href='https://github.com/Chris-Wagg'>
 					<button aria-label='Github' className='nav-bar__btn'>
-						<img
+						<Image
 							className='nav-bar__img-svg'
 							src='./github-mark.svg'
 							alt='Github'
+							width={30}
+							height={30}
 						/>
 					</button>
 				</Link>
 				<Link href='https://www.linkedin.com/in/chriswagg'>
 					<button aria-label='Linkedin' className='nav-bar__btn'>
-						<img
+						<Image
 							className='nav-bar__img-svg'
 							src='./linkedin.svg'
 							alt='Linkedin'
+							width={30}
+							height={30}
 						/>
 					</button>
 				</Link>
@@ -36,10 +41,12 @@ export default function NavBar() {
 					<button
 						aria-label='Frontend Mentor'
 						className='nav-bar__btn'>
-						<img
+						<Image
 							className='nav-bar__img-svg'
 							src=''
 							alt='Frontend Mentor'
+							width={30}
+							height={30}
 						/>
 					</button>
 				</Link>
