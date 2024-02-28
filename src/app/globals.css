@@ -144,3 +144,38 @@ select {
 	margin-top: 0;
 	color: var(--clr-main-text);
 }
+
+/* hero section classes */
+
+.hero {
+	background-color: var(--clr-main);
+	height: 80vh;
+	display: grid;
+	align-items: center;
+}
+
+.hero__title {
+	margin-top: 0;
+	margin-left: 5rem;
+
+	color: var(--clr-main-text);
+}
+
+.hero--greeting {
+	font-size: var(--fs-med);
+	font-weight: var(--fw-med);
+}
+
+.hero--name {
+	font-size: var(--fs-lg);
+	font-weight: var(--fw-bold);
+}
+
+.hero__text {
+	/* margin-inline: auto; */
+	margin-left: 10rem;
+	width: 75ch;
+	font-size: var(--fs-med);
+	color: var(--clr-main-text);
+	font-weight: var(--fw-light);
+}
