@@ -86,7 +86,7 @@ select {
 	--fs-med: 1.5rem;
 	--fs-lg: 2.5rem;
 
-	--clr-main: hsl(115, 47%, 26%);
+	--clr-main: hsl(115, 45%, 32%);
 	--clr-main-text: hsl(0, 0%, 100%);
 	--clr-title-text: hsl(0, 0%, 0%);
 
@@ -106,6 +106,7 @@ select {
 	display: flex;
 	align-items: center;
 	transition: ease-in-out 0.1s;
+	text-decoration: none;
 }
 
 .nav-bar__btn:hover {
@@ -115,6 +116,10 @@ select {
 .nav-bar__btn:active {
 	scale: 1.075;
 	background-color: hsl(115, 47%, 18%);
+}
+
+.nav-bar__btn > a {
+	text-decoration: none;
 }
 
 /* header classes */
