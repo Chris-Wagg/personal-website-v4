@@ -97,15 +97,24 @@ select {
 
 /* utility classes */
 
-button {
+.nav-bar__btn {
 	padding: 0.25rem 1rem;
 	border: 2px solid #ffffff;
 	border-radius: 10px;
 	background-color: var(--clr-main);
 	color: var(--clr-main-text);
+	display: flex;
+	align-items: center;
+	transition: ease-in-out 0.1s;
 }
 
-.nav-bar__btn {
+.nav-bar__btn:hover {
+	scale: 1.15;
+}
+
+.nav-bar__btn:active {
+	scale: 1.075;
+	background-color: hsl(115, 47%, 18%);
 }
 
 /* header classes */
