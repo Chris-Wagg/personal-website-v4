@@ -8,7 +8,7 @@ export default function Hero() {
 				<div>
 					<h1 className='hero__title'>
 						<span className='hero--greeting'>{`Kia ora, I'm...`}</span>
-						<span className='hero--name'> Chris Wagg</span>
+						<span className='hero--name'>Chris Wagg</span>
 					</h1>
 					<p className='hero__text'>
 						Welcome to my website.

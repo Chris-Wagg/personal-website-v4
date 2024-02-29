@@ -169,6 +169,7 @@ select {
 .hero--name {
 	font-size: var(--fs-lg);
 	font-weight: var(--fw-bold);
+	border-bottom: 2px solid var(--clr-main-text);
 }
 
 .hero__text {
