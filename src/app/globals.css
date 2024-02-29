@@ -180,3 +180,20 @@ select {
 	color: var(--clr-main-text);
 	font-weight: var(--fw-light);
 }
+
+/* experience section classes */
+
+.experience {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+}
+
+.card__title {
+	font-size: var(--fs-lg);
+}
+
+.card__text {
+	font-size: var(--fs-med);
+	margin-bottom: 2rem;
+}
