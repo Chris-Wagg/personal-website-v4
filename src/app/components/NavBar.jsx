@@ -5,7 +5,7 @@ export default function NavBar() {
 	return (
 		<header>
 			<div className='head-wrapper'>
-				{/* <h1 className='head__logo'>Chris Wagg</h1> */}
+				<h1 className='head__logo'>Chris Wagg</h1>
 				<nav className='nav-bar'>
 					<Link
 						href='https://github.com/Chris-Wagg'
@@ -34,7 +34,7 @@ export default function NavBar() {
 						className='nav-bar__btn'>
 						<Image
 							className='nav-bar__img-svg'
-							src=''
+							src='./frontendmentor-logo.svg'
 							alt='Frontend Mentor'
 							width={30}
 							height={30}
