@@ -16,7 +16,7 @@ export default function ProjectCard(props) {
 			<a href={githubLink}>
 				<Image
 					className='card__github-svg'
-					src='./github-mark.svg'
+					src='./github-mark-white.svg'
 					alt='Github'
 					width={30}
 					height={30}
