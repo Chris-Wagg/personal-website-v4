@@ -98,6 +98,10 @@ select {
 
 /* utility classes */
 
+body {
+	background-color: var(--clr-background);
+}
+
 .nav-bar__btn {
 	padding: 0.25rem 1rem;
 	border: 2px solid #ffffff;
@@ -139,12 +143,31 @@ select {
 	color: var(--clr-text-white);
 }
 
+.contact-btn {
+	margin-left: 10rem;
+	margin-top: 2rem;
+
+	color: var(--clr-text-white);
+	background-color: var(--clr-background);
+	border: 0;
+	border-bottom: 2px solid var(--clr-text-white);
+
+	transition: ease-in-out 0.1s;
+}
+
+.contact-btn:hover {
+	scale: 1.15;
+}
+
+.contact-btn:active {
+	scale: 1.075;
+}
+
 /* header classes */
 
 .head-wrapper {
 	display: flex;
 	justify-content: space-between;
-	background-color: var(--clr-background);
 	padding: var(--space-sm);
 	align-items: center;
 }
@@ -154,7 +177,6 @@ select {
 	gap: var(--space-sm);
 
 	justify-content: space-evenly;
-	/* align-items: center; */
 }
 
 .head__logo {
@@ -165,17 +187,24 @@ select {
 /* hero section classes */
 
 .hero {
-	background-color: var(--clr-background);
 	height: 80vh;
+	margin: 5rem;
+}
+
+.hero__wrapper {
 	display: grid;
-	align-items: center;
+	/* align-items: center; */
+	justify-content: center;
+	border-bottom: 1px solid var(--clr-text-white);
+	height: 100%;
 }
 
 .hero__title {
-	margin-top: 0;
 	margin-left: var(--space-lg);
 
 	color: var(--clr-text-white);
+
+	align-self: center;
 }
 
 .hero--greeting {
@@ -190,12 +219,13 @@ select {
 }
 
 .hero__text {
-	/* margin-inline: auto; */
 	margin-left: 10rem;
 	width: 75ch;
 	font-size: var(--fs-med);
 	color: var(--clr-text-white);
 	font-weight: var(--fw-light);
+
+	align-self: self-start;
 }
 
 /* experience section classes */
@@ -204,14 +234,9 @@ select {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	text-align: center;
-	background-color: var(--clr-background);
 }
 
 /* projects section classes  */
-
-.projects {
-	background-color: var(--clr-background);
-}
 
 .projects__title {
 	font-size: var(--fs-xl);
