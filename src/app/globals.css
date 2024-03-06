@@ -153,6 +153,8 @@ body {
 	border-bottom: 2px solid var(--clr-text-white);
 
 	transition: ease-in-out 0.1s;
+
+	font-size: var(--fs-med);
 }
 
 .contact-btn:hover {
@@ -175,8 +177,10 @@ body {
 .nav-bar {
 	display: flex;
 	gap: var(--space-sm);
+	width: 100%;
+	justify-content: flex-end;
 
-	justify-content: space-evenly;
+	/* justify-content: space-evenly; */
 }
 
 .head__logo {

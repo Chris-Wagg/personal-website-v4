@@ -5,17 +5,8 @@ export default function NavBar() {
 	return (
 		<header>
 			<div className='head-wrapper'>
-				<h1 className='head__logo'>Chris Wagg</h1>
+				{/* <h1 className='head__logo'>Chris Wagg</h1> */}
 				<nav className='nav-bar'>
-					<Link href='#about-me' className='nav-bar__btn'>
-						About me
-					</Link>
-					<Link href='#Projects' className='nav-bar__btn'>
-						Projects
-					</Link>
-					<Link href='#Experience' className='nav-bar__btn'>
-						experience
-					</Link>
 					<Link
 						href='https://github.com/Chris-Wagg'
 						className='nav-bar__btn'>
