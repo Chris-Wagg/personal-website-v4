@@ -40,7 +40,6 @@ export default function NavBar() {
 							height={30}
 						/>
 					</Link>
-
 					<button className='nav-bar__btn'>
 						<a href='./Chris-Wagg-CV.pdf' download>
 							Resume

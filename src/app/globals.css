@@ -1,19 +1,16 @@
 /* css reset from https://piccalil.li/blog/a-more-modern-css-reset/ */
-
 /* Box sizing rules */
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 }
-
 /* Prevent font size inflation */
 html {
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
 }
-
 /* Remove default margin in favour of better control in authored CSS */
 body,
 h1,
@@ -27,14 +24,12 @@ dl,
 dd {
 	margin-block-end: 0;
 }
-
 /* Set core body defaults */
 body {
-	min-height: 100vh;
 	line-height: 1.5;
 	margin: 0;
+	min-height: 100vh;
 }
-
 /* Set shorter line heights on headings and interactive elements */
 h1,
 h2,
@@ -45,7 +40,6 @@ input,
 label {
 	line-height: 1.1;
 }
-
 /* Balance text wrapping on headings */
 h1,
 h2,
@@ -53,20 +47,17 @@ h3,
 h4 {
 	text-wrap: balance;
 }
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-	text-decoration-skip-ink: auto;
 	color: currentColor;
+	text-decoration-skip-ink: auto;
 }
-
 /* Make images easier to work with */
 img,
 picture {
-	max-width: 100%;
 	display: block;
+	max-width: 100%;
 }
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -74,183 +65,144 @@ textarea,
 select {
 	font: inherit;
 }
-
 /* Custom properties */
-
 :root {
+	--clr-background: hsl(115, 45%, 32%);
+	--clr-text-black: hsl(0, 0%, 0%);
+	--clr-text-white: hsl(0, 0%, 100%);
+	--fs-lg: 2.5rem;
+	--fs-med: 1.5rem;
+	--fs-small: 1rem;
+	--fs-xl: 3.5rem;
+	--fw-bold: 700;
 	--fw-light: 200;
 	--fw-med: 400;
-	--fw-bold: 700;
-
-	--fs-small: 1rem;
-	--fs-med: 1.5rem;
-	--fs-lg: 2.5rem;
-	--fs-xl: 3.5rem;
-
-	--clr-background: hsl(115, 45%, 32%);
-	--clr-text-white: hsl(0, 0%, 100%);
-	--clr-text-black: hsl(0, 0%, 0%);
-
-	--space-sm: 1rem;
-	--space-med: 2rem;
 	--space-lg: 3rem;
+	--space-med: 2rem;
+	--space-sm: 1rem;
 }
-
 /* utility classes */
-
 body {
 	background-color: var(--clr-background);
 }
-
 .nav-bar__btn {
-	padding: 0.25rem 1rem;
+	align-items: center;
+	background-color: var(--clr-background);
 	border: 2px solid #ffffff;
 	border-radius: 10px;
-	background-color: var(--clr-background);
 	color: var(--clr-text-white);
 	display: flex;
-	align-items: center;
-	transition: ease-in-out 0.1s;
+	padding: 0.25rem 1rem;
 	text-decoration: none;
+	transition: ease-in-out 0.1s;
 }
-
 .nav-bar__btn:hover {
 	scale: 1.15;
 }
-
 .nav-bar__btn:active {
-	scale: 1.075;
 	background-color: hsl(115, 47%, 18%);
+	scale: 1.075;
 }
-
 .nav-bar__btn > a {
 	text-decoration: none;
 }
-
 .card {
 	margin: var(--space-med);
 }
-
 .card__title {
-	font-size: var(--fs-lg);
 	color: var(--clr-text-white);
+	font-size: var(--fs-lg);
 	margin-bottom: var(--space-med);
 }
-
 .card__text {
+	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	margin-bottom: var(--space-med);
-	color: var(--clr-text-white);
 }
-
 .contact-btn {
-	margin-left: 10rem;
-	margin-top: 2rem;
-
-	color: var(--clr-text-white);
 	background-color: var(--clr-background);
 	border: 0;
 	border-bottom: 2px solid var(--clr-text-white);
-
-	transition: ease-in-out 0.1s;
-
+	color: var(--clr-text-white);
 	font-size: var(--fs-med);
+	margin-left: 10rem;
+	margin-top: 2rem;
+	transition: ease-in-out 0.1s;
 }
-
 .contact-btn:hover {
 	scale: 1.15;
 }
-
 .contact-btn:active {
 	scale: 1.075;
 }
-
 /* header classes */
-
 .head-wrapper {
+	align-items: center;
 	display: flex;
 	justify-content: space-between;
 	padding: var(--space-sm);
-	align-items: center;
 }
-
 .nav-bar {
 	display: flex;
 	gap: var(--space-sm);
-
 	justify-content: space-evenly;
 }
-
 .head__logo {
-	margin-top: 0;
 	color: var(--clr-text-white);
+	margin-top: 0;
 }
-
 /* hero section classes */
-
 .hero {
 	height: 80vh;
-	margin: 5rem;
+	margin: 0 5rem;
 }
-
 .hero__wrapper {
-	display: grid;
-	/* align-items: center; */
-	justify-content: center;
 	border-bottom: 1px solid var(--clr-text-white);
+	display: grid;
 	height: 100%;
+	justify-content: center;
+	/* align-items: center; */
 }
-
 .hero__title {
-	margin-left: var(--space-lg);
-
-	color: var(--clr-text-white);
-
 	align-self: center;
+	color: var(--clr-text-white);
+	margin-left: var(--space-lg);
 }
-
 .hero--greeting {
 	font-size: var(--fs-med);
 	font-weight: var(--fw-med);
 }
-
 .hero--name {
+	border-bottom: 2px solid var(--clr-text-white);
 	font-size: var(--fs-xl);
 	font-weight: var(--fw-bold);
-	border-bottom: 2px solid var(--clr-text-white);
 }
-
 .hero__text {
+	align-self: self-start;
+	color: var(--clr-text-white);
+	font-size: var(--fs-med);
+	font-weight: var(--fw-light);
 	margin-left: 10rem;
 	width: 75ch;
-	font-size: var(--fs-med);
-	color: var(--clr-text-white);
-	font-weight: var(--fw-light);
-
-	align-self: self-start;
 }
-
 /* experience section classes */
-
 .experience {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	text-align: center;
 	margin: 0 5rem;
+	text-align: center;
+
+	border-bottom: 1px solid var(--clr-text-white);
 }
-
 /* projects section classes  */
-
 .projects__title {
+	color: var(--clr-text-white);
 	font-size: var(--fs-xl);
 	margin-left: 10rem;
-	color: var(--clr-text-white);
 }
-
 .projects__wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	margin: var(--space-med);
 }
-
 /* project cards */
