@@ -1,7 +1,7 @@
 export default function Footer() {
 	return (
 		<footer className='footer'>
-			<div className='contaxt-text'>
+			<div className='contact-text'>
 				<h2>Contact me!</h2>
 				<p>
 					{`Want to drop me a line? Have some questions? Just feel like
@@ -29,8 +29,9 @@ export default function Footer() {
 				<textarea
 					name='message'
 					id='message'
-					cols='30'
-					rows='10'
+					placeholder='Say hi!'
+					// cols='50'
+					// rows='1'
 					className='contact-form__input--text-area'
 				/>
 				<button>Send message</button>

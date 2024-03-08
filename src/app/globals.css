@@ -65,6 +65,10 @@ textarea,
 select {
 	font: inherit;
 }
+
+textarea {
+	resize: none;
+}
 /* Custom properties */
 :root {
 	--clr-background: hsl(115, 45%, 32%);
@@ -118,12 +122,6 @@ body {
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	margin-bottom: var(--space-med);
-}
-
-.card__links {
-	display: flex;
-	margin: var(--space-sm) 0;
-	gap: var(--space-med);
 }
 .contact-btn {
 	background-color: var(--clr-background);
@@ -193,12 +191,11 @@ body {
 }
 /* experience section classes */
 .experience {
+	border-bottom: 1px solid var(--clr-text-white);
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	margin: 0 5rem;
 	text-align: center;
-
-	border-bottom: 1px solid var(--clr-text-white);
 }
 /* projects section classes  */
 .projects__title {
@@ -212,3 +209,47 @@ body {
 	margin: var(--space-med);
 }
 /* project cards */
+.card__links {
+	display: flex;
+	gap: var(--space-med);
+	margin: var(--space-sm) 0;
+}
+
+/* footer classes */
+
+/* TODO: make everything layout in grid with breakout etc */
+
+.footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.contact-text {
+	width: 45ch;
+	justify-self: center;
+}
+
+.contact-form {
+	display: grid;
+	/* justify-self: center; */
+	gap: var(--space-sm);
+}
+
+.contact-form__input {
+	color: var(--clr-text-white);
+	background-color: var(--clr-background);
+	border: 0;
+	border-bottom: 1px solid var(--clr-text-white);
+}
+
+::placeholder {
+	color: var(--clr-text-white);
+	opacity: 1;
+}
+
+.contact-form__input--text-area {
+	color: var(--clr-text-white);
+	background-color: var(--clr-background);
+	border: 0;
+	border-bottom: 1px solid var(--clr-text-white);
+}
