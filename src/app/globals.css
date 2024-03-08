@@ -222,11 +222,13 @@ body {
 .footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	background-color: hsl(116, 45%, 24%);
 }
 
 .contact-text {
 	width: 45ch;
 	justify-self: center;
+	color: var(--clr-text-white);
 }
 
 .contact-form {
@@ -237,7 +239,7 @@ body {
 
 .contact-form__input {
 	color: var(--clr-text-white);
-	background-color: var(--clr-background);
+	background-color: hsl(116, 45%, 24%);
 	border: 0;
 	border-bottom: 1px solid var(--clr-text-white);
 }
@@ -249,7 +251,7 @@ body {
 
 .contact-form__input--text-area {
 	color: var(--clr-text-white);
-	background-color: var(--clr-background);
+	background-color: hsl(116, 45%, 24%);
 	border: 0;
 	border-bottom: 1px solid var(--clr-text-white);
 }
