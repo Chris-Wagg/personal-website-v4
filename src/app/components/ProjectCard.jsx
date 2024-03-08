@@ -13,32 +13,34 @@ export default function ProjectCard(props) {
 
 	return (
 		<div className='card'>
-			<h3 className='card__title'>{projectName}</h3>
 			<a href={liveLink}>
 				<img src={`./${cardImage}.jpg`} alt={cardAlt} />
 			</a>
-			<p className='card__built-with'>{builtWith}</p>
-			<a href={femLink} className='card__live-link'>
+			{/* <p className='card__built-with'>{builtWith}</p> */}
+			{/* <a href={femLink} className='card__live-link'>
 				Check it out!
-			</a>
-			<a href={githubLink}>
-				<Image
-					className='card__svg'
-					src='./github-mark-white.svg'
-					alt='Github link'
-					width={30}
-					height={30}
-				/>
-			</a>
-			<a href={femLink}>
-				<Image
-					className='card__svg'
-					src='./frontendmentor-logo.svg'
-					alt='Frontend Mentor link'
-					width={30}
-					height={30}
-				/>
-			</a>
+			</a> */}
+			<h3 className='card__title'>{projectName}</h3>
+			<div className='card__links'>
+				<a href={githubLink}>
+					<Image
+						className='card__svg'
+						src='./github-mark-white.svg'
+						alt='Github link'
+						width={30}
+						height={30}
+					/>
+				</a>
+				<a href={femLink}>
+					<Image
+						className='card__svg'
+						src='./frontendmentor-logo.svg'
+						alt='Frontend Mentor link'
+						width={30}
+						height={30}
+					/>
+				</a>
+			</div>
 		</div>
 	)
 }

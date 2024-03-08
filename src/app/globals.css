@@ -107,17 +107,23 @@ body {
 	text-decoration: none;
 }
 .card {
-	margin: var(--space-med);
+	margin: var(--space-sm);
 }
 .card__title {
 	color: var(--clr-text-white);
 	font-size: var(--fs-lg);
-	margin-bottom: var(--space-med);
+	margin: var(--space-sm) 0;
 }
 .card__text {
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	margin-bottom: var(--space-med);
+}
+
+.card__links {
+	display: flex;
+	margin: var(--space-sm) 0;
+	gap: var(--space-med);
 }
 .contact-btn {
 	background-color: var(--clr-background);

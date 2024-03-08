@@ -12,7 +12,8 @@ export default function Projects() {
 					projectTech='Next.js, HTML, CSS'
 					liveLink='https://chris-wagg.github.io/travel-v2/'
 					githubLink='https://github.com/Chris-Wagg/travel-v2'
-					femLink='#'
+					femLink=''
+					builtWith='Next.js'
 				/>
 				<ProjectCard
 					projectName='Base Apparel landing page'
