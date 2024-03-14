@@ -87,21 +87,21 @@ textarea {
 /* Grid setup */
 .content-grid {
 	display: grid;
+
 	grid-template-columns:
 		1rem
 		[full-width-start]
-		auto
+		1fr
 		[breakout-left-start]
-		auto
+		1fr
 		[content-start breakout-right-start]
-		auto
+		1fr
 		[content-end breakout-left-end]
-		auto
+		1fr
 		[breakout-right-end]
-		auto
+		1fr
 		[full-width-end]
 		1rem;
-	text-align: center;
 }
 .content-grid > * {
 	grid-column: content;
@@ -115,7 +115,6 @@ textarea {
 .content-grid > .full-width {
 	grid-column: full-width;
 }
-
 /* utility classes */
 body {
 	background-color: var(--clr-background);
@@ -160,9 +159,9 @@ body {
 	border-bottom: 2px solid var(--clr-text-white);
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
-	margin-left: 10rem;
 	margin-top: 2rem;
 	transition: ease-in-out 0.1s;
+	width: fit-content;
 }
 .contact-btn:hover {
 	scale: 1.15;
@@ -189,20 +188,17 @@ body {
 /* hero section classes */
 .hero {
 	height: 80vh;
-	margin: 0 5rem;
+
+	/* margin: 0 5rem; */
 }
 .hero__wrapper {
 	border-bottom: 1px solid var(--clr-text-white);
 	display: grid;
 	height: 100%;
-	justify-content: center;
-
-	/* align-items: center; */
 }
 .hero__title {
 	align-self: center;
 	color: var(--clr-text-white);
-	margin-left: var(--space-lg);
 }
 .hero--greeting {
 	font-size: var(--fs-med);
@@ -218,8 +214,11 @@ body {
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	font-weight: var(--fw-light);
-	margin-left: 10rem;
-	width: 75ch;
+	width: 70ch;
+}
+
+.hero__highlight {
+	font-weight: var(--fw-bold);
 }
 /* experience section classes */
 .experience {
@@ -233,7 +232,8 @@ body {
 .projects__title {
 	color: var(--clr-text-white);
 	font-size: var(--fs-xl);
-	margin-left: 10rem;
+
+	/* margin-left: 10rem; */
 }
 .projects__wrapper {
 	display: grid;
@@ -247,7 +247,6 @@ body {
 	margin: var(--space-sm) 0;
 }
 /* footer classes */
-/* TODO: make everything layout in grid with breakout etc */
 .footer {
 	background-color: hsl(116, 45%, 24%);
 	display: grid;
