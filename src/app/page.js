@@ -6,10 +6,12 @@ import Footer from './components/Footer'
 export default function Home() {
 	return (
 		<>
-			<Hero />
-			<Experience />
-			<Projects />
-			<Footer />
+			<div className='content-grid'>
+				<Hero />
+				<Experience />
+				<Projects />
+				<Footer />
+			</div>
 		</>
 	)
 }

@@ -65,7 +65,6 @@ textarea,
 select {
 	font: inherit;
 }
-
 textarea {
 	resize: none;
 }
@@ -85,6 +84,38 @@ textarea {
 	--space-med: 2rem;
 	--space-sm: 1rem;
 }
+/* Grid setup */
+.content-grid {
+	display: grid;
+	grid-template-columns:
+		1rem
+		[full-width-start]
+		auto
+		[breakout-left-start]
+		auto
+		[content-start breakout-right-start]
+		auto
+		[content-end breakout-left-end]
+		auto
+		[breakout-right-end]
+		auto
+		[full-width-end]
+		1rem;
+	text-align: center;
+}
+.content-grid > * {
+	grid-column: content;
+}
+.content-grid > .breakout-left {
+	grid-column: breakout-left;
+}
+.content-grid > .breakout-right {
+	grid-column: breakout-right;
+}
+.content-grid > .full-width {
+	grid-column: full-width;
+}
+
 /* utility classes */
 body {
 	background-color: var(--clr-background);
@@ -165,6 +196,7 @@ body {
 	display: grid;
 	height: 100%;
 	justify-content: center;
+
 	/* align-items: center; */
 }
 .hero__title {
@@ -214,52 +246,43 @@ body {
 	gap: var(--space-med);
 	margin: var(--space-sm) 0;
 }
-
 /* footer classes */
-
 /* TODO: make everything layout in grid with breakout etc */
-
 .footer {
+	background-color: hsl(116, 45%, 24%);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	background-color: hsl(116, 45%, 24%);
 }
-
 .contact-text {
-	width: 45ch;
-	justify-self: center;
 	color: var(--clr-text-white);
+	justify-self: center;
+	width: 45ch;
 }
-
 .contact-form {
 	display: grid;
 	gap: var(--space-sm);
 	margin: var(--space-med);
 }
-
 .contact-form__input {
-	color: var(--clr-text-white);
 	background-color: hsl(116, 45%, 24%);
 	border: 0;
 	border-bottom: 1px solid var(--clr-text-white);
+	color: var(--clr-text-white);
 }
-
 ::placeholder {
 	color: var(--clr-text-white);
 	opacity: 0.7;
 }
-
 .contact-form__input--text-area {
-	color: var(--clr-text-white);
 	background-color: hsl(116, 45%, 24%);
 	border: 0;
 	border-bottom: 1px solid var(--clr-text-white);
+	color: var(--clr-text-white);
 }
-
 .contact-form--submit-button {
 	background-color: hsl(116, 45%, 24%);
-	color: var(--clr-text-white);
 	border: 0;
 	border-bottom: 1px solid var(--clr-text-white);
+	color: var(--clr-text-white);
 	justify-self: end;
 }
