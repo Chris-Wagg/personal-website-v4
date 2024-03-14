@@ -34,7 +34,9 @@ export default function Footer() {
 					// rows='1'
 					className='contact-form__input--text-area'
 				/>
-				<button>Send message</button>
+				<button className='contact-form--submit-button'>
+					Send message
+				</button>
 			</form>
 		</footer>
 	)
