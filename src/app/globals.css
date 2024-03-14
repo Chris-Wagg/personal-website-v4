@@ -250,6 +250,8 @@ body {
 	margin: var(--space-sm) 0;
 }
 /* footer classes */
+
+/* TODO: fix svg attribution */
 .footer {
 	background-color: hsl(116, 45%, 24%);
 	display: grid;
