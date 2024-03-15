@@ -117,14 +117,14 @@ textarea {
 }
 /* utility classes */
 body {
-	background-image: url('/background.svg');
 	background-attachment: fixed;
+	background-image: url('/background.svg');
 	background-position: center;
 	background-size: cover;
 }
 .nav-bar__btn {
 	align-items: center;
-	background-color: var(--clr-background);
+	background-color: transparent;
 	border: 2px solid #ffffff;
 	border-radius: 10px;
 	color: var(--clr-text-white);
@@ -137,7 +137,6 @@ body {
 	scale: 1.15;
 }
 .nav-bar__btn:active {
-	background-color: hsl(115, 47%, 18%);
 	scale: 1.075;
 }
 .nav-bar__btn > a {
@@ -157,12 +156,12 @@ body {
 	margin-bottom: var(--space-med);
 }
 .contact-btn {
-	background-color: var(--clr-background);
+	background-color: transparent;
 	border: 0;
 	border-bottom: 2px solid var(--clr-text-white);
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
-	margin-top: 2rem;
+	margin-top: var(--space-med);
 	transition: ease-in-out 0.1s;
 	width: fit-content;
 }
@@ -189,10 +188,8 @@ body {
 	margin-top: 0;
 }
 /* hero section classes */
-
 .hero {
 	height: 80vh;
-
 	margin: 0 5rem;
 }
 .hero__wrapper {
@@ -250,10 +247,8 @@ body {
 	margin: var(--space-sm) 0;
 }
 /* footer classes */
-
 /* TODO: fix svg attribution */
 .footer {
-	background-color: hsl(116, 45%, 24%);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
@@ -267,26 +262,18 @@ body {
 	gap: var(--space-sm);
 	margin: var(--space-med);
 }
-.contact-form__input {
-	background-color: hsl(116, 45%, 24%);
-	border: 0;
-	border-bottom: 1px solid var(--clr-text-white);
-	color: var(--clr-text-white);
-}
-::placeholder {
-	color: var(--clr-text-white);
-	opacity: 0.7;
-}
-.contact-form__input--text-area {
-	background-color: hsl(116, 45%, 24%);
+.contact-form__input,
+.contact-form__input--text-area,
+.contact-form--submit-button {
+	background-color: transparent;
 	border: 0;
 	border-bottom: 1px solid var(--clr-text-white);
 	color: var(--clr-text-white);
 }
 .contact-form--submit-button {
-	background-color: hsl(116, 45%, 24%);
-	border: 0;
-	border-bottom: 1px solid var(--clr-text-white);
-	color: var(--clr-text-white);
 	justify-self: end;
+}
+::placeholder {
+	color: var(--clr-text-white);
+	opacity: 0.7;
 }
