@@ -45,6 +45,7 @@ export default function Footer() {
 					Send message
 				</button>
 			</form>
+			{/* TODO: sort email js stuff */}
 		</footer>
 	)
 }

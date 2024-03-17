@@ -32,6 +32,7 @@ export default function Hero() {
 							</span>
 						</p>
 						<button className='contact-btn'>Get in touch!</button>
+						{/* TODO: fix scroll to send message */}
 					</div>
 				</div>
 			</section>
