@@ -198,7 +198,7 @@ body {
 }
 /* hero section classes */
 .hero {
-	height: 80vh;
+	max-height: 80vh;
 	margin: 0 5rem;
 }
 .hero__wrapper {
@@ -220,13 +220,18 @@ body {
 	font-weight: var(--fw-bold);
 }
 
+.hero__text-wrapper {
+	margin: var(--space-lg) 0;
+}
+
 .hero__text {
 	align-self: self-start;
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	font-weight: var(--fw-light);
-	width: 70ch;
+	/* width: 70ch; */
 	/* TODO: fix this width sizing so it shrinks etc */
+	/* margin-bottom: var(--space-lg); */
 }
 
 .hero__highlight {

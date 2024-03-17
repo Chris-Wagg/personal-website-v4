@@ -11,8 +11,8 @@ export default function Hero() {
 						<span className='hero--name'>Chris Wagg</span>
 					</h1>
 
-					<div>
-						<p className='hero__text'>
+					<div className='hero__text-wrapper breakout-full'>
+						<p className='hero__text '>
 							Welcome to my website.
 							<span className='hero__highlight'>
 								{` I try and build cool, accessibile stuff for the internet.`}

@@ -42,7 +42,7 @@ export default function NavBar() {
 					</Link>
 					<button className='nav-bar__btn'>
 						<a href='./Chris-Wagg-CV.pdf' download>
-							Resume
+							Resumé
 						</a>
 					</button>
 				</nav>
