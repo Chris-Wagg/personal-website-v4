@@ -219,13 +219,16 @@ body {
 	font-size: var(--fs-xl);
 	font-weight: var(--fw-bold);
 }
+
 .hero__text {
 	align-self: self-start;
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	font-weight: var(--fw-light);
 	width: 70ch;
+	/* TODO: fix this width sizing so it shrinks etc */
 }
+
 .hero__highlight {
 	font-weight: var(--fw-bold);
 }
@@ -283,7 +286,7 @@ body {
 	color: var(--clr-text-white);
 }
 .contact-form--submit-button {
-	justify-self: end;
+	justify-self: start;
 }
 ::placeholder {
 	color: var(--clr-text-white);
