@@ -68,6 +68,17 @@ select {
 textarea {
 	resize: none;
 }
+
+/* Scroll behaviours */
+html {
+	scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion) {
+	html {
+		scroll-behavior: reduce;
+	}
+}
+
 /* Custom properties */
 :root {
 	--clr-background: hsl(115, 45%, 32%);
@@ -246,6 +257,7 @@ body {
 	font-size: var(--fs-xl);
 	grid-column: breakout;
 	grid-row: title;
+	margin: var(--space-med);
 }
 .projects__wrapper {
 	display: grid;

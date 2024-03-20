@@ -16,7 +16,7 @@ export default function Footer() {
 					Free SVG Backgrounds and Patterns by SVGBackgrounds.com
 				</a>
 			</div>
-			<form action='submit' className='contact-form'>
+			<form action='submit' className='contact-form' id='contact'>
 				<input
 					type='text'
 					id='name'

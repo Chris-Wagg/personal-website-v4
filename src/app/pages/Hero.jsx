@@ -1,5 +1,4 @@
-// import NavBar from '../components/NavBar'
-
+import Link from 'next/link'
 export default function Hero() {
 	return (
 		<>
@@ -31,7 +30,12 @@ export default function Hero() {
 									that everyone can use. Maybe you might like some of it too!`}
 							</span>
 						</p>
-						<button className='contact-btn'>Get in touch!</button>
+						<Link
+							href='#contact'
+							// scroll={false}
+							className='contact-btn'>
+							Get in touch!
+						</Link>
 						{/* TODO: fix scroll to send message */}
 					</div>
 				</div>
