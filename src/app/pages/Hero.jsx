@@ -6,12 +6,12 @@ export default function Hero() {
 			{/* <NavBar /> */}
 			<section className='hero '>
 				<div className='hero__wrapper content-grid'>
-					<h1 className='hero__title breakout-left'>
+					<h1 className='hero__title'>
 						<span className='hero--greeting'>{`Kia ora, I'm...`}</span>
 						<span className='hero--name'>Chris Wagg</span>
 					</h1>
 
-					<div className='hero__text-wrapper breakout-full'>
+					<div className='hero__text-wrapper'>
 						<p className='hero__text '>
 							Welcome to my website.
 							<span className='hero__highlight'>

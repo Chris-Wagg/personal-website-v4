@@ -1,7 +1,7 @@
 export default function Experience() {
 	return (
 		<section className='experience content-grid'>
-			<div className='experience-card-wrapper breakout-full'>
+			<div className='experience-card-wrapper'>
 				<div className='card'>
 					<h3 className='card__title'>HTML</h3>
 					<p className='card__text'>2+ years</p>

@@ -3,8 +3,8 @@ import ProjectCard from '../components/ProjectCard'
 export default function Projects() {
 	return (
 		<section className='projects content-grid'>
-			<h2 className='projects__title breakout-left'>Projects</h2>
-			<div className='projects__wrapper full-width'>
+			<h2 className='projects__title'>Projects</h2>
+			<div className='projects__wrapper'>
 				<ProjectCard
 					projectName='Middle Earth Travel'
 					cardImage='ME-travel-screenshot'
