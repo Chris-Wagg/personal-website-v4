@@ -1,3 +1,5 @@
+import EmailForm from './EmailForm'
+
 export default function Footer() {
 	return (
 		<footer className='footer'>
@@ -16,7 +18,7 @@ export default function Footer() {
 					Free SVG Backgrounds and Patterns by SVGBackgrounds.com
 				</a>
 			</div>
-			<form action='submit' className='contact-form' id='contact'>
+			{/* <form action='submit' className='contact-form' id='contact'>
 				<input
 					type='text'
 					id='name'
@@ -44,8 +46,9 @@ export default function Footer() {
 				<button className='contact-form--submit-button'>
 					Send message
 				</button>
-			</form>
+			</form> */}
 			{/* TODO: sort email js stuff */}
+			<EmailForm />
 		</footer>
 	)
 }
