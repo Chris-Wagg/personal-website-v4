@@ -68,7 +68,6 @@ select {
 textarea {
 	resize: none;
 }
-
 /* Scroll behaviours */
 html {
 	scroll-behavior: smooth;
@@ -78,7 +77,6 @@ html {
 		scroll-behavior: reduce;
 	}
 }
-
 /* Custom properties */
 :root {
 	--clr-background: hsl(115, 45%, 32%);
@@ -273,20 +271,23 @@ body {
 	margin: var(--space-sm) 0;
 }
 /* footer classes */
-/* TODO: fix svg attribution */
 .footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	justify-items: center;
 }
 .contact-text {
+	align-items: space-between;
 	color: var(--clr-text-white);
-	justify-self: center;
+	display: grid;
+	justify-content: center;
 	width: 45ch;
 }
 .contact-form {
 	display: grid;
 	gap: var(--space-sm);
 	margin: var(--space-med);
+	width: 80%;
 }
 .contact-form__input,
 .contact-form__input--text-area,
