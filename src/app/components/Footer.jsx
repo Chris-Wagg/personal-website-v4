@@ -7,11 +7,11 @@ export default function Footer() {
 					<p>
 						{`Want to drop me a line? Have some questions? Just feel like
 						a chat? Send me a message and I'll get back to you as soon
-						as I can.`}
+						as I can!`}
 					</p>
 				</div>
 				<a
-					className='attibution'
+					className='svg-link'
 					href='https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/'>
 					Free SVG Backgrounds and Patterns by SVGBackgrounds.com
 				</a>
