@@ -114,9 +114,7 @@ html {
 	grid-template-rows:
 		[title-start]
 		auto
-		[title-end]
-		auto
-		[text-start]
+		[title-end text-start]
 		auto
 		[text-end];
 }
