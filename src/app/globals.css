@@ -227,10 +227,6 @@ body {
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	font-weight: var(--fw-light);
-
-	/* width: 70ch; */
-	/* TODO: fix this width sizing so it shrinks etc */
-	/* margin-bottom: var(--space-lg); */
 }
 .hero__highlight {
 	font-weight: var(--fw-bold);
@@ -261,6 +257,7 @@ body {
 	grid-row: text;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	justify-items: center;
+	border-bottom: 1px solid white;
 }
 /* project cards */
 .card__links {
