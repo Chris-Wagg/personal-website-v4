@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { redirect } from 'next/dist/server/api-utils'
 
 export default function ContactUs() {
 	const form = useRef()
@@ -16,14 +17,7 @@ export default function ContactUs() {
 			.sendForm('service_beviky9', 'contact_form', form.current, {
 				publicKey: 'XJBlzcsGbvPojcC6z',
 			})
-			.then(
-				() => {
-					console.log('SUCCESS!')
-				},
-				(error) => {
-					console.log('FAILED...', error.text)
-				}
-			)
+
 			.then(setName(''), setEmail(''), setMessage(''))
 	}
 

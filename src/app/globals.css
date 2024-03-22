@@ -163,13 +163,15 @@ body {
 }
 .contact-btn {
 	background-color: transparent;
-	border: 0;
+	/* border: 0; */
 	border-bottom: 2px solid var(--clr-text-white);
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	margin-top: var(--space-med);
 	transition: ease-in-out 0.1s;
 	width: fit-content;
+	text-decoration: none;
+	/* TODO: fix this so it behaves like a button on hover etc */
 }
 .contact-btn:hover {
 	scale: 1.15;
