@@ -18,36 +18,6 @@ export default function Footer() {
 					Free SVG Backgrounds and Patterns by SVGBackgrounds.com
 				</a>
 			</div>
-			{/* <form action='submit' className='contact-form' id='contact'>
-				<input
-					type='text'
-					id='name'
-					name='name'
-					placeholder='Name'
-					className='contact-form__input'
-				/>
-
-				<input
-					type='email'
-					id='email'
-					name='email'
-					placeholder='Email'
-					className='contact-form__input'
-				/>
-
-				<textarea
-					name='message'
-					id='message'
-					placeholder='Say hi!'
-					// cols='50'
-					// rows='1'
-					className='contact-form__input--text-area'
-				/>
-				<button className='contact-form--submit-button'>
-					Send message
-				</button>
-			</form> */}
-			{/* TODO: sort email js stuff */}
 			<EmailForm />
 		</footer>
 	)
