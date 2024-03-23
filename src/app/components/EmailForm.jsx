@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { redirect } from 'next/dist/server/api-utils'
 
 export default function ContactUs() {
 	const form = useRef()

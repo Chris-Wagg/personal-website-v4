@@ -4,6 +4,7 @@ import './globals.css'
 const roboto_condensed = Roboto_Condensed({
 	weight: ['200', '400', '700'],
 	subsets: ['latin'],
+	display: 'swap',
 })
 
 export const metadata = {
