@@ -16,10 +16,7 @@ export default function ProjectCard(props) {
 			<a href={liveLink}>
 				<img src={`./${cardImage}.jpg`} alt={cardAlt} />
 			</a>
-			{/* <p className='card__built-with'>{builtWith}</p> */}
-			{/* <a href={femLink} className='card__live-link'>
-				Check it out!
-			</a> */}
+
 			<h3 className='card__title'>{projectName}</h3>
 			<div className='card__links'>
 				<a href={githubLink}>
