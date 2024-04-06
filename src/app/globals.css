@@ -305,3 +305,52 @@ body {
 	color: black;
 	font-size: 12px;
 }
+
+/* Media queries */
+
+@media (max-width: 768px) {
+	.hero__title {
+		grid-column: full-width;
+	}
+}
+@media (max-width: 425px) {
+	.head-wrapper {
+		flex-direction: column;
+	}
+	.nav-bar {
+		flex-wrap: wrap;
+		padding: var(--space-sm);
+	}
+	.hero__text-wrapper {
+		grid-column: full-width;
+	}
+	.hero {
+		margin: 1rem;
+	}
+	.hero__title {
+		display: grid;
+	}
+	.experience {
+		margin: 1rem;
+	}
+	/* projects section classes  */
+	.projects__title {
+		grid-column: full-width;
+		text-align: center;
+	}
+	.projects__wrapper {
+		justify-content: center;
+	}
+	/* project cards */
+	.card__links {
+		display: flex;
+		gap: var(--space-med);
+		margin: var(--space-sm) 0;
+	}
+	.footer {
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		margin: var(--space-med);
+	}
+}
