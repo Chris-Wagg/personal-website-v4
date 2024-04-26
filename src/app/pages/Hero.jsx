@@ -27,9 +27,9 @@ export default function Hero() {
 									that everyone can use. Maybe you might like some of it too!`}
 							</span>
 						</p>
-						<Link href='#contact' className='contact-btn'>
+						{/* <Link href='#contact' className='contact-btn'>
 							Get in touch!
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 			</section>

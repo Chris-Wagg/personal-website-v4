@@ -26,7 +26,6 @@ export default function ContactUs() {
 			onSubmit={sendEmail}
 			className='contact-form'
 			id='contact'>
-			{/* <label>Name</label> */}
 			<input
 				type='text'
 				name='user_name'
@@ -35,7 +34,7 @@ export default function ContactUs() {
 				className='contact-form__input'
 				placeholder='Name'
 			/>
-			{/* <label>Email</label> */}
+
 			<input
 				type='email'
 				name='user_email'
@@ -44,7 +43,7 @@ export default function ContactUs() {
 				className='contact-form__input'
 				placeholder='Email'
 			/>
-			{/* <label>Message</label> */}
+
 			<textarea
 				name='message'
 				value={message}

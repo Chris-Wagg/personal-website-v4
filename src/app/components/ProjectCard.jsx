@@ -1,15 +1,8 @@
 import Image from 'next/image'
 
 export default function ProjectCard(props) {
-	const {
-		projectName,
-		builtWith,
-		liveLink,
-		githubLink,
-		cardImage,
-		cardAlt,
-		femLink,
-	} = props
+	const { projectName, liveLink, githubLink, cardImage, cardAlt, femLink } =
+		props
 
 	return (
 		<div className='card'>

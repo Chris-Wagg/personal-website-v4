@@ -9,42 +9,50 @@ export default function NavBar() {
 				<nav className='nav-bar'>
 					<Link
 						href='https://github.com/Chris-Wagg'
-						className='nav-bar__btn'>
+						className='nav-bar__btn'
+						title='Github'>
 						<Image
 							className='nav-bar__img-svg'
 							src='./github-mark-white.svg'
-							alt='Github'
+							alt='Github logo'
+							role='none'
 							width={30}
 							height={30}
 						/>
 					</Link>
 					<Link
 						href='https://www.linkedin.com/in/chriswagg'
-						className='nav-bar__btn'>
+						className='nav-bar__btn'
+						title='Linkedin'>
 						<Image
 							className='nav-bar__img-svg'
 							src='./linkedin.svg'
-							alt='Linkedin'
+							alt='Linkedin logo'
+							role='none'
 							width={30}
 							height={30}
 						/>
 					</Link>
 					<Link
 						href='https://www.frontendmentor.io/profile/Chris-Wagg'
-						className='nav-bar__btn'>
+						className='nav-bar__btn'
+						title='Frontend mentor'>
 						<Image
 							className='nav-bar__img-svg'
 							src='./frontendmentor-logo.svg'
-							alt='Frontend Mentor'
+							alt='Frontend Mentor logo'
+							role='none'
 							width={30}
 							height={30}
 						/>
 					</Link>
-					<button className='nav-bar__btn'>
-						<a href='./Chris-Wagg-CV.pdf' download>
-							Resumé
-						</a>
-					</button>
+					<a
+						href='./Chris-Wagg-CV.pdf'
+						className='nav-bar__btn'
+						aria-label='Resumé download'
+						download>
+						Resumé
+					</a>
 				</nav>
 			</div>
 		</header>

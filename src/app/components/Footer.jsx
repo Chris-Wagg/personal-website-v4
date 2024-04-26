@@ -12,11 +12,6 @@ export default function Footer() {
 						as I can!`}
 					</p>
 				</div>
-				<a
-					className='svg-link'
-					href='https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/'>
-					Free SVG Backgrounds and Patterns by SVGBackgrounds.com
-				</a>
 			</div>
 			<EmailForm />
 		</footer>
