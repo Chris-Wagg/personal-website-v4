@@ -8,7 +8,7 @@ export default function Projects() {
 				<ProjectCard
 					projectName='Middle Earth Travel'
 					cardImage='ME-travel-screenshot'
-					cardAlt='Middle Earth travel screenshot'
+					cardAlt='Middle Earth travel'
 					projectTech='Next.js, HTML, CSS'
 					liveLink='https://chris-wagg.github.io/travel-v2/'
 					githubLink='https://github.com/Chris-Wagg/travel-v2'
@@ -27,7 +27,7 @@ export default function Projects() {
 				<ProjectCard
 					projectName='Signup form'
 					cardImage='fem-signup-form'
-					cardAlt='sign up project'
+					cardAlt='frontend mentor singnup form'
 					projectTech='Next.js, HTML, CSS, JS'
 					liveLink='https://chris-wagg-frontend-mentor-projects.github.io/sign-up-form/'
 					githubLink='https://github.com/Chris-Wagg-Frontend-Mentor-Projects/sign-up-form'

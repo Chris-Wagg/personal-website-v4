@@ -6,28 +6,29 @@ export default function ProjectCard(props) {
 
 	return (
 		<div className='card'>
-			<a href={liveLink}>
-				<img src={`./${cardImage}.jpg`} alt={cardAlt} />
+			<img src={`./${cardImage}.jpg`} alt={cardAlt} role='none' />
+			<a className='card__title' href={liveLink}>
+				{projectName}
 			</a>
-
-			<h3 className='card__title'>{projectName}</h3>
 			<div className='card__links'>
-				<a href={githubLink}>
+				<a href={githubLink} title='Github'>
 					<Image
 						className='card__svg'
 						src='./github-mark-white.svg'
 						alt='Github link'
 						width={30}
 						height={30}
+						role='none'
 					/>
 				</a>
-				<a href={femLink}>
+				<a href={femLink} title='Frontend Mentor'>
 					<Image
 						className='card__svg'
 						src='./frontendmentor-logo.svg'
 						alt='Frontend Mentor link'
 						width={30}
 						height={30}
+						role='none'
 					/>
 				</a>
 			</div>

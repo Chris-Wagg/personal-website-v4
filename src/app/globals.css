@@ -155,6 +155,8 @@ body {
 	color: var(--clr-text-white);
 	font-size: var(--fs-lg);
 	margin: var(--space-sm) 0;
+	text-decoration: none;
+	border-bottom: 2px solid var(--clr-text-white);
 }
 .card__text {
 	color: var(--clr-text-white);
@@ -238,6 +240,13 @@ body {
 	border-bottom: 1px solid var(--clr-text-white);
 	margin: 0 5rem;
 }
+
+.experience__title {
+	color: var(--clr-text-white);
+	font-size: var(--fs-xl);
+	grid-column: breakout;
+}
+
 .experience-card-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -312,6 +321,11 @@ body {
 	.hero__title {
 		grid-column: full-width;
 	}
+
+	.experience__title {
+		grid-column: full-width;
+		text-align: center;
+	}
 }
 @media (max-width: 425px) {
 	.head-wrapper {
@@ -333,7 +347,7 @@ body {
 	.experience {
 		margin: 1rem;
 	}
-	/* projects section classes  */
+
 	.projects__title {
 		grid-column: full-width;
 		text-align: center;
@@ -341,7 +355,7 @@ body {
 	.projects__wrapper {
 		justify-content: center;
 	}
-	/* project cards */
+
 	.card__links {
 		display: flex;
 		gap: var(--space-med);
