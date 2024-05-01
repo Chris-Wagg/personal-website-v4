@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 export default function NavBar() {
 	return (
-		<header>
+		<nav>
 			<div className='head-wrapper'>
 				<h1 className='head__logo'>Chris Wagg</h1>
-				<nav className='nav-bar'>
+				<div className='nav-bar'>
 					<Link
 						href='https://github.com/Chris-Wagg'
 						className='nav-bar__btn'
@@ -53,8 +53,8 @@ export default function NavBar() {
 						download>
 						Resumé
 					</a>
-				</nav>
+				</div>
 			</div>
-		</header>
+		</nav>
 	)
 }
