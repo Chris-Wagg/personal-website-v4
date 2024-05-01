@@ -153,34 +153,16 @@ body {
 	margin: var(--space-med);
 }
 .card__title {
+	border-bottom: 2px solid var(--clr-text-white);
 	color: var(--clr-text-white);
 	font-size: var(--fs-lg);
 	margin: var(--space-sm) 0;
 	text-decoration: none;
-	border-bottom: 2px solid var(--clr-text-white);
 }
 .card__text {
 	color: var(--clr-text-white);
 	font-size: var(--fs-med);
 	margin-bottom: var(--space-med);
-}
-.contact-btn {
-	background-color: transparent;
-	/* border: 0; */
-	border-bottom: 2px solid var(--clr-text-white);
-	color: var(--clr-text-white);
-	font-size: var(--fs-med);
-	margin-top: var(--space-med);
-	transition: ease-in-out 0.1s;
-	width: fit-content;
-	text-decoration: none;
-	/* TODO: fix this so it behaves like a button on hover etc */
-}
-.contact-btn:hover {
-	scale: 1.15;
-}
-.contact-btn:active {
-	scale: 1.075;
 }
 /* header classes */
 .head-wrapper {
@@ -241,13 +223,11 @@ body {
 	border-bottom: 1px solid var(--clr-text-white);
 	margin: 0 5rem;
 }
-
 .experience__title {
 	color: var(--clr-text-white);
 	font-size: var(--fs-xl);
 	grid-column: breakout;
 }
-
 .experience-card-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -264,12 +244,12 @@ body {
 	margin: var(--space-med);
 }
 .projects__wrapper {
+	border-bottom: 1px solid white;
 	display: grid;
 	grid-column: full-width;
 	grid-row: text;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	justify-items: center;
-	border-bottom: 1px solid white;
 }
 /* project cards */
 .card__links {
@@ -302,27 +282,32 @@ body {
 	border: 0;
 	border-bottom: 1px solid var(--clr-text-white);
 	color: var(--clr-text-white);
+	transition: ease-in-out 0.1s;
 }
 .contact-form--submit-button {
 	justify-self: start;
+	border: 2px solid var(--clr-text-white);
+	border-radius: 8px;
+}
+.contact-form--submit-button:hover {
+	scale: 1.075;
+}
+.contact-form--submit-button:active {
+	scale: 1;
 }
 ::placeholder {
 	color: var(--clr-text-white);
 	opacity: 0.7;
 }
-
 .svg-link {
 	color: black;
 	font-size: 12px;
 }
-
 /* Media queries */
-
 @media (max-width: 768px) {
 	.hero__title {
 		grid-column: full-width;
 	}
-
 	.experience__title {
 		grid-column: full-width;
 		text-align: center;
@@ -348,7 +333,6 @@ body {
 	.experience {
 		margin: 1rem;
 	}
-
 	.projects__title {
 		grid-column: full-width;
 		text-align: center;
@@ -356,7 +340,6 @@ body {
 	.projects__wrapper {
 		justify-content: center;
 	}
-
 	.card__links {
 		display: flex;
 		gap: var(--space-med);
