@@ -127,6 +127,7 @@ body {
 	background-image: url('../../public/background.svg');
 	background-position: center;
 	background-size: cover;
+	width: 100%;
 }
 .nav-bar__btn {
 	align-items: center;
