@@ -164,6 +164,14 @@ body {
 	font-size: var(--fs-med);
 	margin-bottom: var(--space-med);
 }
+.error-message {
+	color: red;
+	margin-top: -10px;
+}
+
+.success-message {
+	color: var(--clr-text-white);
+}
 /* header classes */
 .head-wrapper {
 	align-items: center;
