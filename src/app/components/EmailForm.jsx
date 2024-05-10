@@ -19,7 +19,6 @@ export default function ContactUs() {
 	const [isEmailValid, setIsEmailValid] = useState()
 	const [isMessageValid, setIsMessageValid] = useState()
 
-	// TODO: stop the useEffect from triggering twice on page load
 	useEffect(() => {
 		validateName()
 	}, [name])
@@ -90,7 +89,6 @@ export default function ContactUs() {
 		nameSubmitValidation()
 		emailSubmitValidation()
 		messageSubmitValidation()
-		console.log(isNameValid, isEmailValid, isMessageValid, 'console log 1')
 
 		if (
 			isNameValid === false ||
@@ -99,31 +97,18 @@ export default function ContactUs() {
 		) {
 			formError.text = 'Please fill out the form properly before sending'
 			setFormError(formError)
-			console.log(
-				isNameValid,
-				isEmailValid,
-				isMessageValid,
-				'console log 2'
-			)
 		} else if (
 			isNameValid === true &&
 			isEmailValid === true &&
 			isMessageValid === true
 		) {
 			setFormError('')
-			console.log(
-				isNameValid,
-				isEmailValid,
-				isMessageValid,
-				'console.log 3'
-			)
-			// emailjs
-			// 	.sendForm('service_beviky9', 'contact_form', form.current, {
-			// 		publicKey: 'XJBlzcsGbvPojcC6z',
-			// 	})
-			// .then(
-			setName(''), setEmail(''), setMessage('')
-			// )
+
+			emailjs
+				.sendForm('service_beviky9', 'contact_form', form.current, {
+					publicKey: 'XJBlzcsGbvPojcC6z',
+				})
+				.then(setName(''), setEmail(''), setMessage(''))
 			formSuccess.text = 'Success! Thanks for sending me a message'
 			setFormSuccess(formSuccess)
 		} else {
