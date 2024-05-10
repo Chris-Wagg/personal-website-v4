@@ -2,7 +2,7 @@
 
 // *** if getting 'Gmail_API: Invalid grant. Please reconnect your Gmail account' this can be because of a changed password
 
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 
 export default function ContactUs() {
@@ -19,51 +19,78 @@ export default function ContactUs() {
 	const [isEmailValid, setIsEmailValid] = useState()
 	const [isMessageValid, setIsMessageValid] = useState()
 
+	// TODO: stop the useEffect from triggering twice on page load
+	useEffect(() => {
+		validateName()
+	}, [name])
+	useEffect(() => {
+		validateEmail()
+	}, [email])
+	useEffect(() => {
+		validateMessage()
+	}, [message])
+
 	const validateName = () => {
-		let nameError = {}
 		if (name === '') {
+			setIsNameValid(false)
+		} else if (name !== '') {
+			setIsNameValid(true)
+		}
+	}
+
+	const nameSubmitValidation = () => {
+		let nameError = {}
+		if (isNameValid === false) {
 			nameError.text = 'Please enter a name'
 			setNameError(nameError)
-			return setIsNameValid(false)
 		} else if (name !== '') {
 			setNameError('')
-			return setIsNameValid(true)
 		}
-		//TODO: fix this so it updates on the first button press
 	}
+
 	const validateEmail = () => {
-		let emailError = {}
 		if (email === '') {
-			emailError.text = 'Please enter an email address'
-			setEmailError(emailError)
-			return setIsEmailValid(false)
+			setIsEmailValid(false)
 		} else if (!/\S+@\S+\.\S+/.test(email)) {
-			emailError.text = 'Please enter a valid email address. '
+			setIsEmailValid(false)
+		} else {
+			setIsEmailValid(true)
+		}
+	}
+	const emailSubmitValidation = () => {
+		let emailError = {}
+		if (isEmailValid === false) {
+			emailError.text = 'Please enter a valid email address'
 			setEmailError(emailError)
-			return setIsEmailValid(false)
 		} else {
 			setEmailError('')
-			return setIsEmailValid(true)
 		}
 	}
 	const validateMessage = () => {
-		let messageError = {}
 		if (message === '') {
-			messageError.text = 'Please enter a message'
-			setMessageError(messageError)
-			return setIsMessageValid(false)
+			setIsMessageValid(false)
 		} else if (message !== '') {
-			setMessageError('')
-			return setIsMessageValid(true)
+			setIsMessageValid(true)
 		}
 	}
+	const messageSubmitValidation = () => {
+		let messageError = {}
+		if (isMessageValid === false) {
+			messageError.text = 'Please enter a message'
+			setMessageError(messageError)
+		} else if (message !== '') {
+			setMessageError('')
+		}
+	}
+
 	const sendEmail = (e) => {
 		let formError = {}
 		let formSuccess = {}
 		e.preventDefault()
-		validateName()
-		validateEmail()
-		validateMessage()
+		nameSubmitValidation()
+		emailSubmitValidation()
+		messageSubmitValidation()
+		console.log(isNameValid, isEmailValid, isMessageValid, 'console log 1')
 
 		if (
 			isNameValid === false ||
@@ -72,14 +99,24 @@ export default function ContactUs() {
 		) {
 			formError.text = 'Please fill out the form properly before sending'
 			setFormError(formError)
-			console.log(isNameValid, isEmailValid, isMessageValid)
+			console.log(
+				isNameValid,
+				isEmailValid,
+				isMessageValid,
+				'console log 2'
+			)
 		} else if (
 			isNameValid === true &&
 			isEmailValid === true &&
 			isMessageValid === true
 		) {
 			setFormError('')
-			console.log(isNameValid, isEmailValid, isMessageValid)
+			console.log(
+				isNameValid,
+				isEmailValid,
+				isMessageValid,
+				'console.log 3'
+			)
 			// emailjs
 			// 	.sendForm('service_beviky9', 'contact_form', form.current, {
 			// 		publicKey: 'XJBlzcsGbvPojcC6z',
