@@ -13,11 +13,31 @@ export default function ContactUs() {
 	const [nameError, setNameError] = useState({})
 	const [emailError, setEmailError] = useState({})
 	const [messageError, setMessageError] = useState({})
+	const [formErrorBoolean, setFormErrorBoolean] = useState(false)
 	const [formError, setFormError] = useState({})
+	const [formSuccessBoolean, setFormSuccessBoolean] = useState(false)
 	const [formSuccess, setFormSuccess] = useState({})
 	const [isNameValid, setIsNameValid] = useState()
 	const [isEmailValid, setIsEmailValid] = useState()
 	const [isMessageValid, setIsMessageValid] = useState()
+
+	useEffect(() => {
+		let errorMessage = document.getElementById('errorMessage')
+		if (errorMessage === null) {
+			return
+		} else {
+			formErrorBoolean === true
+			errorMessage.focus()
+			console.log('error message showing')
+		}
+	}, [formError])
+	useEffect(() => {
+		let successMessage = document.getElementById('successMessage')
+		if (formSuccessBoolean === true) {
+			successMessage.focus()
+			console.log('success message showing')
+		}
+	}, [formSuccess])
 
 	useEffect(() => {
 		validateName()
@@ -95,6 +115,8 @@ export default function ContactUs() {
 			isEmailValid === false ||
 			isMessageValid === false
 		) {
+			setFormSuccess('')
+			setFormErrorBoolean(true)
 			formError.text = 'Please fill out the form properly before sending'
 			setFormError(formError)
 		} else if (
@@ -102,13 +124,16 @@ export default function ContactUs() {
 			isEmailValid === true &&
 			isMessageValid === true
 		) {
+			setFormErrorBoolean(false)
 			setFormError('')
-
-			emailjs
-				.sendForm('service_beviky9', 'contact_form', form.current, {
-					publicKey: 'XJBlzcsGbvPojcC6z',
-				})
-				.then(setName(''), setEmail(''), setMessage(''))
+			// emailjs
+			// 	.sendForm('service_beviky9', 'contact_form', form.current, {
+			// 		publicKey: 'XJBlzcsGbvPojcC6z',
+			// 	})
+			// .then(
+			setName(''), setEmail(''), setMessage('')
+			// )
+			setFormSuccessBoolean(true)
 			formSuccess.text = 'Success! Thanks for sending me a message'
 			setFormSuccess(formSuccess)
 		} else {
@@ -123,12 +148,22 @@ export default function ContactUs() {
 			className='contact-form'
 			id='contact'>
 			{formError.text && (
-				<p className='error-message'>{formError.text}</p>
+				<div className='error-message' id='errorMessage' tabIndex={-1}>
+					{formError.text}
+				</div>
 			)}
 			{formSuccess.text && (
-				<p className='success-message'>{formSuccess.text}</p>
+				<div
+					className='success-message'
+					id='successMessage'
+					tabIndex={-1}>
+					{formSuccess.text}
+				</div>
 			)}
 
+			{nameError.text && (
+				<div className='error-message'>{nameError.text}</div>
+			)}
 			<input
 				type='text'
 				name='user_name'
@@ -137,8 +172,8 @@ export default function ContactUs() {
 				placeholder='Name'
 				onChange={(e) => setName(e.target.value)}
 			/>
-			{nameError.text && (
-				<p className='error-message'>{nameError.text}</p>
+			{emailError.text && (
+				<div className='error-message'>{emailError.text}</div>
 			)}
 			<input
 				type='email'
@@ -148,8 +183,8 @@ export default function ContactUs() {
 				className='contact-form__input'
 				placeholder='Email'
 			/>
-			{emailError.text && (
-				<p className='error-message'>{emailError.text}</p>
+			{messageError.text && (
+				<div className='error-message'>{messageError.text}</div>
 			)}
 			<textarea
 				name='message'
@@ -158,11 +193,8 @@ export default function ContactUs() {
 				className='contact-form__input--text-area'
 				placeholder='Say hi!'
 			/>
-			{messageError.text && (
-				<p className='error-message'>{messageError.text}</p>
-			)}
+
 			<button
-				// onClick={handleSubmit}
 				type='submit'
 				value='Send'
 				className='contact-form--submit-button'>

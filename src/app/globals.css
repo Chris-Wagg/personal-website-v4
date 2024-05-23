@@ -169,9 +169,16 @@ body {
 	margin-top: -10px;
 }
 
+/* #errorMessage:focus {
+	color: blue;
+} */
+
 .success-message {
 	color: var(--clr-text-white);
 }
+/* #successMessage:focus {
+	color: blue;
+} */
 /* header classes */
 .head-wrapper {
 	align-items: center;
