@@ -16,13 +16,13 @@ export default function Projects() {
 					builtWith='Next.js'
 				/>
 				<ProjectCard
-					projectName='Base Apparel landing page'
-					cardImage='base-apparel-ss'
-					cardAlt='Base Apparel landing page'
-					projectTech='Next.js, HTML, CSS, TS'
-					liveLink='https://chris-wagg-frontend-mentor-projects.github.io/base-apparel/'
-					githubLink='https://github.com/Chris-Wagg-Frontend-Mentor-Projects/base-apparel'
-					femLink='https://www.frontendmentor.io/solutions/base-apparel-with-next-typescript-flex-hwpXp9TkCa'
+					projectName='Accessible news homepage'
+					cardImage='news-homepage'
+					cardAlt='news home page screenshot'
+					projectTech='Next.js, HTML, CSS, Accessibility'
+					liveLink='https://chris-wagg-frontend-mentor-projects.github.io/news-homepage/'
+					githubLink='https://github.com/Chris-Wagg-Frontend-Mentor-Projects/news-homepage'
+					femLink='https://www.frontendmentor.io/solutions/news-homepage-cpQDBWXA6L'
 				/>
 				<ProjectCard
 					projectName='Signup form'
