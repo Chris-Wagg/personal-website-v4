@@ -129,6 +129,11 @@ body {
 	background-size: cover;
 	width: 100%;
 }
+
+li {
+	list-style: none;
+}
+
 .nav-bar__btn {
 	align-items: center;
 	background-color: transparent;
@@ -149,6 +154,17 @@ body {
 .nav-bar__btn > a {
 	text-decoration: none;
 }
+
+.hidden-heading {
+	clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
 .card {
 	margin: var(--space-med);
 }
@@ -169,16 +185,10 @@ body {
 	margin-top: -10px;
 }
 
-/* #errorMessage:focus {
-	color: blue;
-} */
-
 .success-message {
 	color: var(--clr-text-white);
 }
-/* #successMessage:focus {
-	color: blue;
-} */
+
 /* header classes */
 .head-wrapper {
 	align-items: center;
@@ -194,6 +204,7 @@ body {
 .head__logo {
 	color: var(--clr-text-white);
 	margin-top: 0;
+	font-size: var(--fs-med);
 }
 /* hero section classes */
 .hero {

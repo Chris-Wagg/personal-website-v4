@@ -11,7 +11,7 @@ export default function ProjectCard(props) {
 				{projectName}
 			</a>
 			<div className='card__links'>
-				<a href={githubLink} title='Github'>
+				<a href={githubLink} title='Github project repository'>
 					<Image
 						className='card__svg'
 						src='./github-mark-white.svg'
@@ -21,7 +21,7 @@ export default function ProjectCard(props) {
 						role='none'
 					/>
 				</a>
-				<a href={femLink} title='Frontend Mentor'>
+				<a href={femLink} title='Frontend Mentor project page'>
 					<Image
 						className='card__svg'
 						src='./frontendmentor-logo.svg'

@@ -4,10 +4,11 @@ export default function Hero() {
 		<>
 			<section className='hero '>
 				<div className='hero__wrapper content-grid'>
-					<h1 className='hero__title'>
+					<h2 className='hidden-heading'>About me</h2>
+					<h3 className='hero__title'>
 						<span className='hero--greeting'>{`Kia ora, I'm...`}</span>
 						<span className='hero--name'>Chris Wagg</span>
-					</h1>
+					</h3>
 
 					<div className='hero__text-wrapper'>
 						<p className='hero__text '>

@@ -8,6 +8,7 @@ export default function Home() {
 	return (
 		<>
 			<NavBar />
+			<h1 className='hidden-heading'>Welcome to my personal website</h1>
 			<Hero />
 			<Experience />
 			<Projects />
