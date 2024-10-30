@@ -163,6 +163,7 @@ export default function ContactUs() {
 				<div className='error-message'>{nameError.text}</div>
 			)}
 			<input
+				required
 				type='text'
 				name='user_name'
 				value={name}
@@ -174,6 +175,7 @@ export default function ContactUs() {
 				<div className='error-message'>{emailError.text}</div>
 			)}
 			<input
+				required
 				type='email'
 				name='user_email'
 				value={email}
@@ -185,6 +187,7 @@ export default function ContactUs() {
 				<div className='error-message'>{messageError.text}</div>
 			)}
 			<textarea
+				required
 				name='message'
 				value={message}
 				onChange={(e) => setMessage(e.target.value)}
