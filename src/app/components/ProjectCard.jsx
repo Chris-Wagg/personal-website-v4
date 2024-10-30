@@ -6,7 +6,7 @@ export default function ProjectCard(props) {
 
 	return (
 		<div className='card'>
-			<img src={`./${cardImage}.jpg`} alt={cardAlt} role='none' />
+			<img src={`./${cardImage}.jpg`} alt='' role='none' />
 			<a className='card__title' href={liveLink}>
 				{projectName}
 			</a>

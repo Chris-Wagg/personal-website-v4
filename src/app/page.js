@@ -7,12 +7,18 @@ import NavBar from './components/NavBar'
 export default function Home() {
 	return (
 		<>
-			<NavBar />
-			<h1 className='hidden-heading'>Welcome to my personal website</h1>
-			<Hero />
-			<Experience />
-			<Projects />
-			<Footer />
+			<body>
+				<NavBar />
+				<h1 className='hidden-heading'>
+					Welcome to my personal website
+				</h1>
+				<main>
+					<Hero />
+					<Experience />
+					<Projects />
+				</main>
+				<Footer />
+			</body>
 		</>
 	)
 }
