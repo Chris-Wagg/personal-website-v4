@@ -71,11 +71,11 @@ export default function ContactUs() {
 		} else if (isEmailValid === true) {
 			setFormErrorBoolean(false)
 			setFormError('')
-			// emailjs
-			// 	.sendForm('service_beviky9', 'contact_form', form.current, {
-			// 		publicKey: 'XJBlzcsGbvPojcC6z',
-			// 	})
-			// 	.then(setName(''), setEmail(''), setMessage(''))
+			emailjs
+				.sendForm('service_beviky9', 'contact_form', form.current, {
+					publicKey: 'XJBlzcsGbvPojcC6z',
+				})
+				.then(setName(''), setEmail(''), setMessage(''))
 			setFormSuccessBoolean(true)
 			formSuccess.text = 'Success! Thanks for sending me a message'
 			setFormSuccess(formSuccess)
