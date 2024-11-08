@@ -301,6 +301,18 @@ li {
 	margin: var(--space-med);
 	width: 80%;
 }
+
+.input-container {
+	display: grid;
+	margin: 0.5rem;
+}
+
+label {
+	font-size: var(--fs-sm);
+	color: var(--clr-text-white);
+	margin-bottom: 20px;
+}
+
 .contact-form__input,
 .contact-form__input--text-area,
 .contact-form--submit-button {

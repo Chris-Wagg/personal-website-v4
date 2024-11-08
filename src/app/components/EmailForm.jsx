@@ -8,18 +8,14 @@ import emailjs from '@emailjs/browser'
 export default function ContactUs() {
 	const form = useRef()
 	const [name, setName] = useState('')
-	const [email, setEmail] = useState('')
 	const [message, setMessage] = useState('')
-	const [nameError, setNameError] = useState({})
+	const [email, setEmail] = useState('')
 	const [emailError, setEmailError] = useState({})
-	const [messageError, setMessageError] = useState({})
 	const [formErrorBoolean, setFormErrorBoolean] = useState(false)
 	const [formError, setFormError] = useState({})
 	const [formSuccessBoolean, setFormSuccessBoolean] = useState(false)
 	const [formSuccess, setFormSuccess] = useState({})
-	const [isNameValid, setIsNameValid] = useState()
 	const [isEmailValid, setIsEmailValid] = useState()
-	const [isMessageValid, setIsMessageValid] = useState()
 
 	useEffect(() => {
 		let errorMessage = document.getElementById('errorMessage')
@@ -28,44 +24,18 @@ export default function ContactUs() {
 		} else {
 			formErrorBoolean === true
 			errorMessage.focus()
-			console.log('error message showing')
 		}
 	}, [formError])
 	useEffect(() => {
 		let successMessage = document.getElementById('successMessage')
 		if (formSuccessBoolean === true) {
 			successMessage.focus()
-			console.log('success message showing')
 		}
 	}, [formSuccess])
 
 	useEffect(() => {
-		validateName()
-	}, [name])
-	useEffect(() => {
 		validateEmail()
 	}, [email])
-	useEffect(() => {
-		validateMessage()
-	}, [message])
-
-	const validateName = () => {
-		if (name === '') {
-			setIsNameValid(false)
-		} else if (name !== '') {
-			setIsNameValid(true)
-		}
-	}
-
-	const nameSubmitValidation = () => {
-		let nameError = {}
-		if (isNameValid === false) {
-			nameError.text = 'Please enter a name'
-			setNameError(nameError)
-		} else if (name !== '') {
-			setNameError('')
-		}
-	}
 
 	const validateEmail = () => {
 		if (email === '') {
@@ -77,6 +47,7 @@ export default function ContactUs() {
 		}
 	}
 	const emailSubmitValidation = () => {
+		setEmailError('')
 		let emailError = {}
 		if (isEmailValid === false) {
 			emailError.text = 'Please enter a valid email address'
@@ -85,52 +56,26 @@ export default function ContactUs() {
 			setEmailError('')
 		}
 	}
-	const validateMessage = () => {
-		if (message === '') {
-			setIsMessageValid(false)
-		} else if (message !== '') {
-			setIsMessageValid(true)
-		}
-	}
-	const messageSubmitValidation = () => {
-		let messageError = {}
-		if (isMessageValid === false) {
-			messageError.text = 'Please enter a message'
-			setMessageError(messageError)
-		} else if (message !== '') {
-			setMessageError('')
-		}
-	}
 
 	const sendEmail = (e) => {
 		let formError = {}
 		let formSuccess = {}
 		e.preventDefault()
-		nameSubmitValidation()
 		emailSubmitValidation()
-		messageSubmitValidation()
 
-		if (
-			isNameValid === false ||
-			isEmailValid === false ||
-			isMessageValid === false
-		) {
+		if (isEmailValid === false) {
 			setFormSuccess('')
 			setFormErrorBoolean(true)
 			formError.text = 'Please fill out the form properly before sending'
 			setFormError(formError)
-		} else if (
-			isNameValid === true &&
-			isEmailValid === true &&
-			isMessageValid === true
-		) {
+		} else if (isEmailValid === true) {
 			setFormErrorBoolean(false)
 			setFormError('')
-			emailjs
-				.sendForm('service_beviky9', 'contact_form', form.current, {
-					publicKey: 'XJBlzcsGbvPojcC6z',
-				})
-				.then(setName(''), setEmail(''), setMessage(''))
+			// emailjs
+			// 	.sendForm('service_beviky9', 'contact_form', form.current, {
+			// 		publicKey: 'XJBlzcsGbvPojcC6z',
+			// 	})
+			// 	.then(setName(''), setEmail(''), setMessage(''))
 			setFormSuccessBoolean(true)
 			formSuccess.text = 'Success! Thanks for sending me a message'
 			setFormSuccess(formSuccess)
@@ -145,13 +90,15 @@ export default function ContactUs() {
 			onSubmit={sendEmail}
 			className='contact-form'
 			id='contact'>
-			{formError.text && (
+			{/* {formError.text && (
 				<div className='error-message' id='errorMessage' tabIndex={-1}>
 					{formError.text}
 				</div>
-			)}
+			)} */}
 			{formSuccess.text && (
 				<div
+					role='alert'
+					aria-live='polite'
 					className='success-message'
 					id='successMessage'
 					tabIndex={-1}>
@@ -159,41 +106,55 @@ export default function ContactUs() {
 				</div>
 			)}
 
-			{nameError.text && (
-				<div className='error-message'>{nameError.text}</div>
-			)}
-			<input
-				required
-				type='text'
-				name='user_name'
-				value={name}
-				className='contact-form__input'
-				placeholder='Name'
-				onChange={(e) => setName(e.target.value)}
-			/>
-			{emailError.text && (
-				<div className='error-message'>{emailError.text}</div>
-			)}
-			<input
-				required
-				type='email'
-				name='user_email'
-				value={email}
-				onChange={(e) => setEmail(e.target.value)}
-				className='contact-form__input'
-				placeholder='Email'
-			/>
-			{messageError.text && (
-				<div className='error-message'>{messageError.text}</div>
-			)}
-			<textarea
-				required
-				name='message'
-				value={message}
-				onChange={(e) => setMessage(e.target.value)}
-				className='contact-form__input--text-area'
-				placeholder='Say hi!'
-			/>
+			<div className='input-container'>
+				<label htmlFor='contact_name'>Name</label>
+				<input
+					aria-required
+					required
+					type='text'
+					name='contact_name'
+					value={name}
+					className='contact-form__input'
+					placeholder='John Smith'
+					onChange={(e) => setName(e.target.value)}
+				/>
+			</div>
+			{/* {emailError.text && (
+				<div
+					id='email-error'
+					role='alert'
+					aria-live='polite'
+					className='error-message'>
+					{emailError.text}
+				</div>
+			)} */}
+			<div className='input-container'>
+				<label htmlFor='contact_reply_email'>Email</label>
+				<input
+					aria-required
+					required
+					type='email'
+					name='contact_reply_email'
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
+					className='contact-form__input'
+					placeholder='email@domain.com'
+					aria-describedby='email-error'
+				/>
+			</div>
+
+			<div className='input-container'>
+				<label htmlFor='message'>Your message</label>
+				<textarea
+					aria-required
+					required
+					name='message'
+					value={message}
+					onChange={(e) => setMessage(e.target.value)}
+					className='contact-form__input--text-area'
+					placeholder='Say hi!'
+				/>
+			</div>
 
 			<button
 				type='submit'
